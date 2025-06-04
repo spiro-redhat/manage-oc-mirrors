@@ -1,4 +1,4 @@
----
+  
 - name: Download oc-mirror archive
   get_url:
     url: "{{ oc_mirror_download_url }}"

@@ -1,0 +1,23 @@
+  
+- name: Download openshift-install archive
+  get_url:
+    url: "{{ ocpinstall_download_url }}"
+    dest: "{{ ocpinstall_tmp_file }}"
+    mode: '0644'
+
+- name: Create temporary directory for oc-mirror extraction
+  file:
+    path: "{{ ocpinstall_extract_path }}"
+    state: directory
+
+- name: Extract oc-mirror
+  unarchive:
+    src: "{{ ocpinstall_tmp_file }}"
+    dest: "{{ ocpinstall_extract_path }}"
+    remote_src: yes
+
+- name: Copy openshift-install binary to install path
+  copy:
+    src: "{{ ocpinstall_extract_path }}/oc-mirror"
+    dest: "{{ ocpinstall_install_path }}"
+    mode: '0755'

@@ -1,0 +1,5 @@
+---
+ocpinstall_download_url: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-install-linux.tar.gz"
+ocpinstall_tmp_file: "/tmp/openshift-install-linux.tar.gz"
+ocpinstall_extract_path: "/tmp/openshift-install"
+ocpinstall_install_path: "/usr/local/bin/openshift-install"
