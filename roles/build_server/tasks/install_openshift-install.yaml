@@ -21,3 +21,10 @@
     src: "{{ ocpinstall_extract_path }}/oc-mirror"
     dest: "{{ ocpinstall_install_path }}"
     mode: '0755'
+
+
+- name: Deploy install-config.yaml from template
+  template:
+    src: install-config.yaml.j2
+    dest: "{{ install_config_path }}"
+    mode: '0755'
