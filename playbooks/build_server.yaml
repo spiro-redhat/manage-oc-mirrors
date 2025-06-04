@@ -1,0 +1,7 @@
+---
+- name: Download and install oc-mirror, openshift-install and oc command 
+  hosts: all
+  become: true
+  roles:
+    - build_server
+

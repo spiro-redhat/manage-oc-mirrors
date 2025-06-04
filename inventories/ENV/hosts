@@ -1,0 +1,5 @@
+[harbor_servers]
+node1 ansible_host=192.168.1.10
+node2 ansible_host=192.168.1.11
+[build_servers]
+node1 ansible_host=192.168.1.10 

@@ -1,0 +1,18 @@
+---
+# Variables to control OCP version 
+ocp_version: "4.18"
+ocp_min_patch_level: "18"
+ocp_max_patch_level: "18" 
+
+# Variables to control cron parameters
+cron_hour: "3"
+cron_minute: "0"
+
+# Variables for paths and script names
+oc_mirror_script: "oc-mirror.sh"
+oc_mirror_script_path: "/usr/local/bin/{{ script_name }}" # where the script will be installed
+oc-mirror_path: "/usr/local/bin/oc-mirror"
+isc_path: "/etc/oc-mirror/isc.yaml"
+workspace_path: "/etc/oc-mirror/workspace"
+harbor_project: "library"
+log_path: "/var/log/myscript.log"

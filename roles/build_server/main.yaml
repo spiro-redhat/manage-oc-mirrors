@@ -1,0 +1,5 @@
+---
+oc_mirror_download_url: "https://example.com/path/to/oc-mirror.tar.gz"
+oc_mirror_tmp_file: "/tmp/oc-mirror.tar.gz"
+oc_mirror_extract_path: "/tmp/oc-mirror"
+oc_mirror_install_path: "/usr/local/bin/oc-mirror"

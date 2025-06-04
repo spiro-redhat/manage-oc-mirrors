@@ -1,0 +1,6 @@
+---
+- name: Deploy script and cron job
+  hosts: harbor_servers
+  become: true
+  roles:
+    - harbor_server
