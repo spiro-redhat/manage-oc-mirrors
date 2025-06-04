@@ -1,0 +1,19 @@
+---
+- name: Deploy ImageSetConfiguration from template 
+  template: 
+    src: isc.yaml.j2
+    dest: "{{ isc_path }}"
+    mode: '0755' 
+
+- name: Deploy oc-mirror.sh from template
+  template:
+    src: oc-mirror.sh.j2
+    dest: "{{ oc_mirror_script_dest_path }}"
+    mode: '0755'
+
+- name: Create cron job to run script
+  cron:
+    name: "Run {{ oc_mirror_script_name }}"
+    job: "{{ oc_mirror_script_dest_path }}"
+    minute: "{{ cron_minute }}"
+    hour: "{{ cron_hour }}"
