@@ -1,6 +1,0 @@
----
-- name: Deploy script and cron job
-  hosts: oc-mirrors
-  become: true
-  roles:
-    - mirror_script

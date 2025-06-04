@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Running on host: {{ ansible_hostname }}"
-{{ oc-mirror_path }} --v2 -c {{ isc_path }} --workspace file://{{ workspace_path }} docker://{{ ansible_hostname }}/{{ harbor_project }} >> {{log_path}}
-
