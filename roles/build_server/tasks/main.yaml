@@ -4,4 +4,3 @@
 
 - name: Install openshift-install
   ansible.builtin.import_tasks: install_openshift-install.yaml
-  

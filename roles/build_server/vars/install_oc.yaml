@@ -1,0 +1,5 @@
+---
+oc_download_url: "https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux-amd64-rhel9.tar.gz"
+oc_tmp_file: "/tmp/openshift-client-linux-amd64-rhel9.tar.gz"
+oc_extract_path: "/tmp/oc"
+oc_install_path: "/usr/local/bin/oc"

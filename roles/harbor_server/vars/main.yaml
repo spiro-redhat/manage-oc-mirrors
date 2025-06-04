@@ -1,4 +1,10 @@
 ---
+# Variables to control OCP version 
+ocp_version: "4.18"
+ocp_min_patch_level: "18"
+ocp_max_patch_level: "18" 
+
+
 # Variables to control cron parameters
 cron_hour: "3"
 cron_minute: "0"

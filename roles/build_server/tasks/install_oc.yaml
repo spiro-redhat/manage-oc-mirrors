@@ -1,0 +1,24 @@
+
+  
+- name: Download oc archive
+  get_url:
+    url: "{{ oc_download_url }}"
+    dest: "{{ oc_tmp_file }}"
+    mode: '0644'
+
+- name: Create temporary directory for oc extraction
+  file:
+    path: "{{ oc_extract_path }}"
+    state: directory
+
+- name: Extract oc
+  unarchive:
+    src: "{{ oc_tmp_file }}"
+    dest: "{{ oc_extract_path }}"
+    remote_src: yes
+
+- name: Copy oc binary to install path
+  copy:
+    src: "{{ oc_extract_path }}/oc"
+    dest: "{{ oc_install_path }}"
+    mode: '0755'
